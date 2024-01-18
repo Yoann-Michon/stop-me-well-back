@@ -1,0 +1,64 @@
+###   
+POST http://localhost:3012/auth/connect
+Content-Type: application/json
+
+{
+  "login": "tomtom",
+  "password": "admin1234"
+}
+
+###   
+POST http://localhost:3012/auth/add
+Content-Type: application/json
+
+{
+  "login": "tomtom",
+  "password": "admin1234"
+}
+
+###   
+GET http://localhost:3012/games
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwNTUyMDQyNn0.LjdK3oWFhRq2PK_8Nd4HtMQtMfqhdm_W_hGUeXMVaTA
+
+###
+GET http://localhost:3012/users/check-auth
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwNTUyMDQyNn0.LjdK3oWFhRq2PK_8Nd4HtMQtMfqhdm_W_hGUeXMVaTA
+
+###
+GET http://localhost:3012/games/1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwNTUyMDQyNn0.LjdK3oWFhRq2PK_8Nd4HtMQtMfqhdm_W_hGUeXMVaTA
+
+
+###  
+POST http://localhost:3012/games
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwNTUyMDQyNn0.LjdK3oWFhRq2PK_8Nd4HtMQtMfqhdm_W_hGUeXMVaTA
+
+{
+  "joueur1":"tomtom",
+  "joueur2":"tomtomette",
+  "winner":"joueur1",
+  "bestTime":"41964898",
+  "objectif":"9"
+}
+
+###
+PUT http://localhost:3012/games/6
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwNTUyMDQyNn0.LjdK3oWFhRq2PK_8Nd4HtMQtMfqhdm_W_hGUeXMVaTA
+
+{
+  "joueur1":"tomtom",
+  "joueur2":"tomtomette",
+  "winner":"joueur2",
+  "bestTime":"4196489458",
+  "objectif":"5"
+}
+
+###  
+DELETE http://localhost:3012/games/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwNTUyMDQyNn0.LjdK3oWFhRq2PK_8Nd4HtMQtMfqhdm_W_hGUeXMVaTA
