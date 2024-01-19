@@ -39,7 +39,7 @@ gameRouter.post("/",middleware,async (req, res) => {
     })
 });
 
-gameRouter.put("/:id",async (req, res) => {
+gameRouter.put("/:id",middleware,async (req, res) => {
     const game = await Game.findOne({where: { id:req.params.id }});
     if (game){
         const upgame = await game.update(req.body);
