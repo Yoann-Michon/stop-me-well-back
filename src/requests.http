@@ -46,7 +46,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhd
 }
 
 ###
-PUT http://localhost:3012/games/6
+PUT http://localhost:3012/games/1
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTcwNTUyMDQyNn0.LjdK3oWFhRq2PK_8Nd4HtMQtMfqhdm_W_hGUeXMVaTA
 
@@ -55,7 +55,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhd
   "joueur2":"tomtomette",
   "winner":"joueur2",
   "bestTime":"4196489458",
-  "objectif":"5"
+  "objectif":"2"
 }
 
 ###  

@@ -23,9 +23,9 @@ const io = new Server(server);
 
 export const User = UserModel(sequelize);
 export const Game = GameModel(sequelize);
+
 //sequelize.sync({ force: true });
 sequelize.sync();
-
 
 app.use(cors());
 app.use(bodyParser.json());
