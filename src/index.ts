@@ -18,13 +18,13 @@ export const sequelize = new Sequelize({
 });
 
 const app = express();
-export const User = UserModel(sequelize);
-export const Game = GameModel(sequelize);
 const server = createServer(app);
 const io = new Server(server);
 
-sequelize.sync({ force: true });
-//sequelize.sync();
+export const User = UserModel(sequelize);
+export const Game = GameModel(sequelize);
+//sequelize.sync({ force: true });
+sequelize.sync();
 
 
 app.use(cors());
@@ -46,9 +46,8 @@ io.on('connection', (socket) => {
 
     let objectif = Math.floor(Math.random()*10);
     joueurs.push({id:socket.id, time:0});
-    console.log('player ready',socket.id);
 
-    if (joueurs.length>0){
+    if (joueurs.length==2){
       socket.emit('game-start', objectif);
     }
 
@@ -87,6 +86,6 @@ io.on('connection', (socket) => {
 
 
 
-app.listen(process.env.PORT, () => {
+server.listen(process.env.PORT, () => {
   console.log(`Example app listening on port ${process.env.PORT}!`)
 });
